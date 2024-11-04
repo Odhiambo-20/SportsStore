@@ -21,7 +21,7 @@ export class ProductRepository {
         });
     }
 
-    getProducts(currentPage: number, pageSize: number, category: string | null = null): Observable<{ products: Product[], totalPages: number }> {
+    getProducts(currentPage: number, pageSize: number, category: string | null = null): Observable<{ products: Product[], totalCount: number }> {
       // First, filter by category if one is selected
       const filteredProducts = category
           ? this.products.filter(p => p.category === category)
@@ -39,7 +39,7 @@ export class ProductRepository {
 
       return of({
           products: paginatedProducts,
-          totalPages: totalPages
+          totalCount: totalPages
       });
   }
 

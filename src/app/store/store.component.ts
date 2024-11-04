@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
 import { CartService } from '../model/cart.service';
-import { ProductListComponent } from './product-list/product-list.component';
-import { CartComponent } from '../cart/cart.component';
+import { ProductListComponent } from "./product-list/product-list.component";
+import { CartComponent } from "../cart/cart.component";
 
 @Component({
   selector: 'app-store',
@@ -20,8 +20,8 @@ export class StoreComponent implements OnInit {
   products: Product[] = [];
   categories: string[] = [];
   currentPage = 1;
-  pageSize = 10;
-  totalPages = 0;
+  pageSize = 3;
+  totalPages = 5;
   selectedCategory: string | null = null;
 
   // Declare and initialize cart properties
@@ -46,11 +46,12 @@ export class StoreComponent implements OnInit {
 
   loadProducts() {
     this.repository.getProducts(this.currentPage, this.pageSize, this.selectedCategory)
-      .subscribe(result => {
-        this.products = result.products;
-        this.totalPages = Math.ceil(result.totalPages / this.pageSize);
-      });
-  }
+        .subscribe(result => {
+            this.products = result.products;
+            this.totalPages = Math.ceil(result.totalCount / this.pageSize);
+        });
+}
+
   loadCategories() {
     this.repository.getCategories().subscribe(categories => {
       this.categories = categories;
@@ -74,6 +75,16 @@ export class StoreComponent implements OnInit {
   }
     setPage(page: number) {
     this.currentPage = page;
+    this.loadProducts();
+  }
+
+  get pageNumbers(): number[] {
+    return Array(this.totalPages).fill(0).map((_, i) => i + 1);
+  }
+
+  changePageSize(newSize: number) {
+    this.pageSize = newSize;
+    this.currentPage = 1;
     this.loadProducts();
   }
 }

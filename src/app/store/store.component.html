@@ -10,23 +10,25 @@
     </div>
   </header>
 
-  <aside class="categories">
-    <button *ngFor="let category of categories" (click)="filterByCategory(category)">
-      {{ category }}
-    </button>
-  </aside>
+    <aside class="categories">
+      <button *ngFor="let category of categories" (click)="filterByCategory(category)">
+        {{ category }}
+      </button>
+    </aside>
 
-  <main class="product-list">
-    <app-product-list
-      [products]="products | slice: (currentPage - 1) * pageSize : currentPage * pageSize"
-      (addToCart)="addToCart($event)">
-    </app-product-list>
-  </main>
+    <app-product-list [products]="products" (addToCart)="addToCart($event)"></app-product-list>
 
-  <div class="pagination">
-    <button (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
-    <span>Page {{ currentPage }} of {{ totalPages }}</span>
-    <button (click)="setPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
-  </div>
+
+    <div class="pagination">
+      <button (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <div class="page-numbers">
+        <button *ngFor="let page of pageNumbers" (click)="setPage(page)"
+          [class.active]="page === currentPage">
+          {{ page }}
+        </button>
+      </div>
+      <button (click)="setPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    </div>
 
 </div>

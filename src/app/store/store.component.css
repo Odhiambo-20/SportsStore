@@ -7,11 +7,11 @@ body {
 
 .store {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 0fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-    "header header"
-    "sidebar content";
+      "header header"
+      "sidebar content";
   gap: 20px;
   padding: 20px;
 }
@@ -43,8 +43,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  top: 6pc;
-  width: 55vw;
+  align-items: center;
+  width: 65vw;
+  border: solid;
+  position: absolute;
+  top: 8pc;
+  right: 0;
+  margin: 10px 20px;
+  border-radius: 1pc;
 }
 
 .store-header h1 {
@@ -113,8 +119,11 @@ body {
 
 .pagination {
   display: flex;
-  justify-content: center;
   margin-top: 20px;
+  width: auto;
+  border: solid;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .pagination button {
