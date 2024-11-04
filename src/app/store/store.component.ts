@@ -64,6 +64,12 @@ export class StoreComponent implements OnInit {
     this.loadProducts();
   }
 
+  resetCategory() {
+    this.selectedCategory = null;
+    this.currentPage = 1;
+    this.loadProducts();
+  }
+
   addToCart(product: Product) {
     this.cartService.addItem(product);
     this.updateCartInfo();

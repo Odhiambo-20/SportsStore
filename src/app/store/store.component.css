@@ -120,10 +120,12 @@ body {
 .pagination {
   display: flex;
   margin-top: 20px;
-  width: auto;
-  border: solid;
+  width: 60vw;
+  position: absolute;
   align-items: center;
+  right: 3pc;
   justify-content: space-around;
+  bottom: 2pc;
 }
 
 .pagination button {
