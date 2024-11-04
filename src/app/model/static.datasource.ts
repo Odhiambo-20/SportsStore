@@ -1,3 +1,5 @@
+// src/app/model/static.datasource.ts
+
 import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
 import { Observable, from } from "rxjs";

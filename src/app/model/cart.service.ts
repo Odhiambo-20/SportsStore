@@ -19,6 +19,16 @@ export class CartService {
     }
   }
 
+  addToCart(product: Product, quantity: number = 1) {
+    // Include quantity parameter in both cases
+    let item = this.items.find(i => i.product.id === product.id);
+    if (item) {
+      item.quantity += quantity;
+    } else {
+      this.items.push({ product, quantity });
+    }
+  }
+
   removeItem(productId: number) {
     this.items = this.items.filter(item => item.product.id !== productId);
   }

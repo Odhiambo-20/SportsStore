@@ -1,6 +1,9 @@
+// src/app/model/product.repository.ts
+
 import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
 import { StaticDataSource } from "./static.datasource";
+import { of } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -17,9 +20,12 @@ export class ProductRepository {
         });
     }
 
-    getProducts(category: string | null = null): Product[] {
-        return this.products
-            .filter(p => category == null || category == p.category);
+    getProducts(currentPage: number, pageSize: number, category: string | null = null) {
+      const products = this.products.filter(p => category == null || category == p.category);
+      const totalPages = Math.ceil(products.length / pageSize);
+
+      // Structure the result as { products, totalPages }
+      return of({ products, totalPages });
     }
 
     getProduct(id: number): Product | undefined {

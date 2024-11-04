@@ -1,3 +1,5 @@
+// src/app/store/cart-summary/cart-summary.component.ts
+
 import { Component } from '@angular/core';
 
 @Component({
