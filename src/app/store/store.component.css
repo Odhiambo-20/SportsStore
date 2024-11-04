@@ -43,13 +43,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 60vw;
-  border: solid;
-  position: absolute;
   top: 6pc;
-  right: 0;
-  margin: 10px 20px;
-  border-radius: 1pc;
+  width: 55vw;
 }
 
 .store-header h1 {

@@ -21,27 +21,27 @@ export class ProductRepository {
         });
     }
 
-    getProducts(currentPage: number, pageSize: number, category: string | null = null): Observable<{products: Product[], totalPages: number}> {
-        // First, filter by category if one is selected
-        const filteredProducts = category
-            ? this.products.filter(p => p.category === category)
-            : this.products;
+    getProducts(currentPage: number, pageSize: number, category: string | null = null): Observable<{ products: Product[], totalPages: number }> {
+      // First, filter by category if one is selected
+      const filteredProducts = category
+          ? this.products.filter(p => p.category === category)
+          : this.products;
 
-        // Calculate total pages based on filtered products
-        const totalPages = Math.ceil(filteredProducts.length / pageSize);
+      // Calculate total pages based on filtered products
+      const totalPages = Math.ceil(filteredProducts.length / pageSize);
 
-        // Calculate start and end indices for pagination
-        const startIndex = (currentPage - 1) * pageSize;
-        const endIndex = Math.min(startIndex + pageSize, filteredProducts.length);
+      // Calculate start and end indices for pagination
+      const startIndex = (currentPage - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, filteredProducts.length);
 
-        // Get the products for the current page
-        const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+      // Get the products for the current page
+      const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
-        return of({
-            products: paginatedProducts,
-            totalPages: totalPages
-        });
-    }
+      return of({
+          products: paginatedProducts,
+          totalPages: totalPages
+      });
+  }
 
     getProduct(id: number): Product | undefined {
         return this.products.find(p => p.id == id);

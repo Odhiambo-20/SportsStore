@@ -8,6 +8,7 @@ import { CartModule } from './cart/cart.module';
 import { ProductRepository } from './model/product.repository';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CartService } from './model/cart.service';
 
 @NgModule({
   imports: [
@@ -18,6 +19,9 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  providers: [ProductRepository]
+  providers: [
+    ProductRepository,
+    CartService
+  ]
 })
 export class AppModule { }

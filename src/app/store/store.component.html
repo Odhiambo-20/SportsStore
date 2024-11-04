@@ -2,8 +2,11 @@
 <div class="store">
   <header class="store-header">
     <h1>Sports Store</h1>
-    <div class="cart-info">
-      Your cart: ({{ cartService.getItemCount() }})
+    <div *ngIf="cartItemCount === 0">
+      Your cart (empty)
+    </div>
+    <div class="cart-info" *ngIf="cartItemCount > 0">
+      Your cart: {{ cartItemCount }} item(s) - {{ cartTotalPrice.toFixed(2) }}
     </div>
   </header>
 
@@ -14,12 +17,16 @@
   </aside>
 
   <main class="product-list">
-    <app-product-list></app-product-list>
+    <app-product-list
+      [products]="products | slice: (currentPage - 1) * pageSize : currentPage * pageSize"
+      (addToCart)="addToCart($event)">
+    </app-product-list>
   </main>
 
-  <footer class="pagination">
-    <button (click)="setPage(page)" *ngFor="let page of [].constructor(totalPages)">
-      {{ page + 1 }}
-    </button>
-  </footer>
+  <div class="pagination">
+    <button (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="setPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+
 </div>
