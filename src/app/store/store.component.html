@@ -1,12 +1,25 @@
 <!-- src/app/store/store.component.html -->
+<div class="store">
+  <header class="store-header">
+    <h1>Sports Store</h1>
+    <div class="cart-info">
+      Your cart: ({{ cartService.getItemCount() }})
+    </div>
+  </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <app-product-list></app-product-list>
-    </div>
-    <div class="col-md-4">
-      <app-cart></app-cart>
-    </div>
-  </div>
+  <aside class="categories">
+    <button *ngFor="let category of categories" (click)="filterByCategory(category)">
+      {{ category }}
+    </button>
+  </aside>
+
+  <main class="product-list">
+    <app-product-list></app-product-list>
+  </main>
+
+  <footer class="pagination">
+    <button (click)="setPage(page)" *ngFor="let page of [].constructor(totalPages)">
+      {{ page + 1 }}
+    </button>
+  </footer>
 </div>

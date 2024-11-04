@@ -1,0 +1,142 @@
+/* src/app/store/store.component.css */
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.store {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  gap: 20px;
+  padding: 20px;
+}
+
+.store-header {
+  grid-area: header;
+  background-color: #333;
+  color: #fff;
+  padding: 1.5pc 3pc;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1pc;
+}
+
+.categories {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  width: 30vw;
+}
+
+.product-list {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 60vw;
+  border: solid;
+  position: absolute;
+  top: 6pc;
+  right: 0;
+  margin: 10px 20px;
+  border-radius: 1pc;
+}
+
+.store-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cart-info {
+  font-size: 1rem;
+}
+
+.categories button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.categories button:hover {
+  background-color: #e0e0e0;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.product-item h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.product-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product-item strong {
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.product-item button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.product-item button:hover {
+  background-color: #218838;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.pagination button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}

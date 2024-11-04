@@ -7,6 +7,7 @@ import { ProductModule } from '././product/product.module';
 import { CartModule } from './cart/cart.module';
 import { ProductRepository } from './model/product.repository';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     ProductModule,
     CartModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [ProductRepository]
 })

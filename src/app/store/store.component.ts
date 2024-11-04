@@ -1,3 +1,5 @@
+// src/app/store/store.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../model/product.model';
@@ -19,11 +21,13 @@ export class StoreComponent implements OnInit {
   currentPage = 1;
   pageSize = 10;
   totalPages = 0;
+  selectedCategory: string | null = null;
 
-  constructor(private repository: ProductRepository, private cartService: CartService) {}
+  constructor(public repository: ProductRepository, public cartService: CartService) {}
 
   ngOnInit() {
     this.loadProducts();
+    this.loadCategories();
   }
 
   loadProducts() {
@@ -31,6 +35,18 @@ export class StoreComponent implements OnInit {
       this.products = result.products;
       this.totalPages = result.totalPages;
     });
+  }
+
+  loadCategories() {
+    this.repository.getCategories().subscribe(categories => {
+      this.categories = categories;
+    });
+  }
+
+  filterByCategory(category: string) {
+    this.selectedCategory = category;
+    this.currentPage = 1; // Reset to first page when changing category
+    this.loadProducts();
   }
 
   addToCart(product: Product) {
