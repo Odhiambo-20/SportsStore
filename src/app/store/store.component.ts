@@ -1,17 +1,12 @@
 // src/app/store/store.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
 import { CartService } from '../model/cart.service';
-import { ProductListComponent } from "./product-list/product-list.component";
-import { CartComponent } from "../cart/cart.component";
 
 @Component({
   selector: 'app-store',
-  standalone: true,
-  imports: [CommonModule, ProductListComponent, CartComponent],
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css'],
   providers: [CartService]

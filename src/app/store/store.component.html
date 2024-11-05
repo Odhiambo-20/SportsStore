@@ -1,7 +1,11 @@
 <!-- src/app/store/store.component.html -->
-<div class="store">
+
+ <div class="store">
   <header class="store-header">
     <h1>Sports Store</h1>
+
+    <a routerLink="/cart">Go to Cart</a>
+
     <div *ngIf="cartItemCount === 0">
       Your cart (empty)
     </div>

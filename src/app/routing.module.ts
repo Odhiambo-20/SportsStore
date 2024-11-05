@@ -1,6 +1,5 @@
 // src/app/routing.module.ts
 
-import { Product } from './model/product.model';
 import { Routes, RouterModule } from '@angular/router';
 import { StoreComponent } from './store/store.component';
 import { ProductDetailComponent } from './store/product-detail/product-detail.component';

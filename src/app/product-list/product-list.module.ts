@@ -3,12 +3,9 @@
 import { Component } from '@angular/core';
 import { ProductListComponent } from '../store/product-list/product-list.component';
 
-
 Component({
   imports: [
-    ProductListComponent,
-    Component
-  ]
+    ProductListComponent  ]
 })
-export { ProductListComponent };
+export {  };
 

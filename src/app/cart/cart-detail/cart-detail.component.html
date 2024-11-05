@@ -1,0 +1,9 @@
+<!-- src/app/cart/cart-detail/cart-detail.component.html -->
+
+<h2>Your Cart</h2>
+
+<div *ngFor="let item of cartService.getItems()">
+  <p>{{ item.product.name }} x {{ item.quantity }}</p>
+</div>
+
+<p>Total: {{ cartService.getTotalPrice() | currency }}</p>

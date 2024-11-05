@@ -1,12 +1,18 @@
 // src/app/app.component.ts
 
 import { Component } from '@angular/core';
-import { StoreComponent } from './store/store.component';
+import { StoreModule } from './store/store.module';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-root',
-    template: '<app-store></app-store>',
-    standalone: true,
-    imports: [StoreComponent]
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: true, // Add standalone: true
+    imports: [StoreModule,RouterOutlet]
 })
-export class AppComponent { }
+
+
+export class AppComponent {
+  title = 'SportsStore';
+}

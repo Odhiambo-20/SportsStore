@@ -7,7 +7,6 @@ import { Product } from '../model/product.model';
 
 @Component({
   selector: 'app-cart',
-  standalone: true,
   imports: [CommonModule], // Add other necessary imports if needed
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']

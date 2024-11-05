@@ -1,22 +1,19 @@
-// src/app/app-routing.module.ts
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StoreComponent } from './store/store.component';
-import { CartSummaryComponent } from './store/cart-summary/cart-summary.component';
+import { CartDetailComponent } from './cart/cart-detail/cart-detail.component';
 import { ProductDetailComponent } from './store/product-detail/product-detail.component';
-import { CommonModule } from '@angular/common';
+import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
   { path: '', component: StoreComponent },
-  { path: 'cart', component: CartSummaryComponent },
-  { path: 'product/:id', component: ProductDetailComponent }
+  { path: 'cart', component: CartDetailComponent },
+  { path: 'product/:id', component: ProductDetailComponent },
+  { path: '**', redirectTo: '/store' }  // Redirect any unknown paths to '/store'
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-    CommonModule
-  ],
+  declarations: [],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
