@@ -1,4 +1,3 @@
-import { CartService } from './../model/cart.service';
 // src/app/checkout/checkout.component.ts
 
 import { Component } from "@angular/core";
@@ -6,7 +5,8 @@ import { FormsModule, NgForm } from "@angular/forms";
 import { OrderRepository } from "../model/order.repository";
 import { Order } from "../model/order.model";
 import { CommonModule } from "@angular/common";
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
+import { CartService } from './../model/cart.service';
 
 @Component({
   standalone: true, 
@@ -23,7 +23,7 @@ export class CheckoutComponent {
   submitted = false;
 
   constructor(
-    private location: Location,
+    private router: Router,
     public repository: OrderRepository,
     public order: Order,
     public service: CartService
@@ -41,7 +41,6 @@ export class CheckoutComponent {
   }
 
   goBack() {
-    this.location.back();
-    this.service.clearCart();
+    this.router.navigate(['/cart']);
   }
 }

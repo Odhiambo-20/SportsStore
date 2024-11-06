@@ -1,7 +1,53 @@
-<!-- src/app/cart/cart.component.html
+<!-- src/app/cart/cart.component.html -->
+<header class="store-header">
+  <h1>Sports Store</h1>
+</header>
 
-<div *ngFor="let item of items">
-  {{ item.product.name }} - {{ item.product.price | currency:'USD':'symbol':'1.2-2' }}
+<h3 class="big-text">Your Cart</h3>
+<div class="cart-container">
+  <div class="table-div" *ngIf="items && items.length > 0; else emptyCart">
+    <table class="cart-table table table-bordered">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.product.name }}</td>
+
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.product.price | currency }}</td>
+          <td>{{ item.quantity * (item.product.price || 0) | currency }}</td>
+
+
+          <td>
+            <button class="btn btn-danger" (click)="removeFromCart(item)">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>{{ items.length }}</td>
+          <td></td>
+          <td> {{ calculateTotal() | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+        <button class="btn btn-primary" (click)="continueShopping()">Continue Shopping</button>
+        <button class="btn btn-success" (click)="checkout()">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>Your cart is empty. Browse the store to add items!</p>
+    <button class="btn btn-primary" (click)="continueShopping()">Go to the Store</button>
+  </ng-template>
 </div>
 
-<button (click)="clearCart()">Clear Cart</button> -->
+<!-- <div class="alt-title">Cart Detail Component</div> -->
