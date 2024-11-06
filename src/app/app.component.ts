@@ -11,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
     standalone: true,
     imports: [StoreComponent,RouterOutlet]
 })
-export class AppComponent { }
+
+
+export class AppComponent {
+  title = 'SportsStore';
+}

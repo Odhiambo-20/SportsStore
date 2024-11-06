@@ -134,6 +134,7 @@ body {
   right: 2pc;
   position: fixed;
   justify-content: space-around;
+  bottom: 2pc;
 }
 
 .pagination button {

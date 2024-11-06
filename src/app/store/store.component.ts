@@ -1,7 +1,6 @@
 // src/app/store/store.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
 import { CartService } from '../model/cart.service';

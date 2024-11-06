@@ -10,6 +10,7 @@ import { OrderRepository } from './model/order.repository';
 import { OrderService } from './model/order.service';
 
 @NgModule({
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     ProductModule,
