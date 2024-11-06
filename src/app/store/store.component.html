@@ -2,15 +2,20 @@
 <div class="store">
   <header class="store-header">
     <h1>Sports Store</h1>
+    
     <div *ngIf="cartItemCount === 0">
       Your cart (empty)
     </div>
     <div class="cart-info" *ngIf="cartItemCount > 0">
-      Your cart: {{ cartItemCount }} item(s) - {{ cartTotalPrice.toFixed(2) }}
+      Your cart: {{ cartItemCount }} item(s) - {{ cartTotalPrice.toFixed(2) | currency }}
     </div>
+
+    <button class="btn go-btn" (click)="goToCart()">Go to Cart</button>
+
   </header>
 
     <aside class="categories">
+      <button (click)="resetCategory()">Home</button>
       <button *ngFor="let category of categories" (click)="filterByCategory(category)">
         {{ category }}
       </button>

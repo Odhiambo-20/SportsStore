@@ -1,0 +1,38 @@
+input.ng-dirty.ng-invalid { border: 2px solid #ff0000 }
+input.ng-dirty.ng-valid { border: 2px solid #6bc502 }
+
+
+.store-header {
+    margin: 1pc;
+    background-color: #333;
+    color: #fff;
+    padding: 1pc 2pc;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1pc;
+  }
+
+  form{
+    padding: 2pc;
+  }
+
+  .centering{
+    display: flex;
+    gap: 1pc;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .final{
+    display: flex;
+    height: -webkit-fill-available;
+    position: absolute;
+    flex-direction: column;
+    background: aquamarine;
+    margin: 1pc;
+    align-items: center;
+    width: -webkit-fill-available;
+    justify-content: center;
+  }

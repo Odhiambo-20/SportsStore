@@ -7,11 +7,13 @@ import { ProductRepository } from '../model/product.repository';
 import { CartService } from '../model/cart.service';
 import { ProductListComponent } from "./product-list/product-list.component";
 import { CartComponent } from "../cart/cart.component";
+import { Router } from '@angular/router';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-store',
   standalone: true,
-  imports: [CommonModule, ProductListComponent, CartComponent],
+  imports: [CommonModule, ProductListComponent, CartComponent, HeaderComponent],
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css'],
   providers: [CartService]
@@ -28,7 +30,7 @@ export class StoreComponent implements OnInit {
   cartItemCount = 0;
   cartTotalPrice = 0;
 
-  constructor(public repository: ProductRepository, public cartService: CartService) {}
+  constructor(public repository: ProductRepository, public cartService: CartService, private router: Router) {}
 
   ngOnInit() {
     this.loadProducts();
@@ -64,6 +66,12 @@ export class StoreComponent implements OnInit {
     this.loadProducts();
   }
 
+  resetCategory() {
+    this.selectedCategory = null;
+    this.currentPage = 1;
+    this.loadProducts();
+  }
+
   addToCart(product: Product) {
     this.cartService.addItem(product);
     this.updateCartInfo();
@@ -86,5 +94,8 @@ export class StoreComponent implements OnInit {
     this.pageSize = newSize;
     this.currentPage = 1;
     this.loadProducts();
+  }
+  goToCart() {
+    this.router.navigate(['/cart']);
   }
 }

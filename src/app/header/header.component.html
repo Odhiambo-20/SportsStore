@@ -1,0 +1,15 @@
+<!-- src\app\header\header.component.html -->
+
+<header class="store-header">
+    <h1>Sports Store</h1>
+
+    <button (click)="goToCart()">Go to Cart</button>
+
+
+    <div *ngIf="cartItemCount === 0">
+      Your cart (empty)
+    </div>
+    <div class="cart-info" *ngIf="cartItemCount > 0">
+      Your cart: {{ cartItemCount }} item(s) - {{ cartTotalPrice.toFixed(2) | currency }}
+    </div>
+  </header>

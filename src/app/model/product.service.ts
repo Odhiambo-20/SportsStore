@@ -20,6 +20,6 @@ export class ProductService {
       new Product(7, "Product 7", "Category 3", "Product 7 (Category 3)", 100),
       new Product(8, "Product 8", "Category 3", "Product 8 (Category 3)", 100),
       new Product(9, "Product 9", "Category 3", "Product 9 (Category 3)", 100),
-  ]);
+    ]);
   }
 }

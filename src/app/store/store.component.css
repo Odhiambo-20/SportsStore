@@ -28,6 +28,11 @@ body {
   border-radius: 1pc;
 }
 
+.go-btn{
+  color: revert-layer;
+  background: aquamarine;
+}
+
 .categories {
   grid-area: sidebar;
   display: flex;
@@ -118,11 +123,16 @@ body {
 }
 
 .pagination {
+  box-shadow: 0 0 10px #0000002e;
+  padding: 1pc 0;
   display: flex;
   margin-top: 20px;
-  width: auto;
-  border: solid;
+  bottom: 1pc;
   align-items: center;
+  left: 2pc;
+  background: white;
+  right: 2pc;
+  position: fixed;
   justify-content: space-around;
 }
 
@@ -141,6 +151,25 @@ body {
 }
 
 .pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.go-to-cart-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.go-to-cart-button button:hover {
+  background-color: #e0e0e0;
+}
+
+.go-to-cart-button button.active {
   background-color: #007bff;
   color: #fff;
 }
