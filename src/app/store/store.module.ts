@@ -9,11 +9,11 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    StoreComponent,
     ProductListComponent
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
+    StoreComponent,
     RouterModule,
     FormsModule
   ],

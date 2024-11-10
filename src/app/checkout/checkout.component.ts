@@ -1,3 +1,4 @@
+import { CartService } from './../model/cart.service';
 // src/app/checkout/checkout.component.ts
 
 import { Component } from "@angular/core";
@@ -6,7 +7,6 @@ import { OrderRepository } from "../model/order.repository";
 import { Order } from "../model/order.model";
 import { CommonModule } from "@angular/common";
 import { Router } from '@angular/router';
-import { CartService } from './../model/cart.service';
 
 @Component({
   standalone: true, 
@@ -19,6 +19,7 @@ import { CartService } from './../model/cart.service';
   ]
 })
 export class CheckoutComponent {
+
   orderSent = false;
   submitted = false;
 
@@ -42,5 +43,9 @@ export class CheckoutComponent {
 
   goBack() {
     this.router.navigate(['/cart']);
+  }
+
+  goToStore() {
+    this.router.navigate(['/store']);
   }
 }

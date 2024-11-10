@@ -1,0 +1,571 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Kayak",
+      "category": "Watersports",
+      "description": "A boat for one person",
+      "price": 275
+    },
+    {
+      "id": "2",
+      "name": "Lifejacket",
+      "category": "Watersports",
+      "description": "Protective and fashionable",
+      "price": 48.95
+    },
+    {
+      "id": "3",
+      "name": "Soccer Ball",
+      "category": "Soccer",
+      "description": "FIFA-approved size and weight",
+      "price": 19.5
+    },
+    {
+      "id": "4",
+      "name": "Corner Flags",
+      "category": "Soccer",
+      "description": "Give your playing field a professional touch",
+      "price": 34.95
+    },
+    {
+      "id": "5",
+      "name": "Stadium",
+      "category": "Soccer",
+      "description": "Flat-packed 35,000-seat stadium",
+      "price": 79500
+    },
+    {
+      "id": "6",
+      "name": "Thinking Cap",
+      "category": "Chess",
+      "description": "Improve brain efficiency by 75%",
+      "price": 16
+    },
+    {
+      "id": "7",
+      "name": "Unsteady Chair",
+      "category": "Chess",
+      "description": "Secretly give your opponent a disadvantage",
+      "price": 29.95
+    },
+    {
+      "id": "8",
+      "name": "Human Chess Board",
+      "category": "Chess",
+      "description": "A fun game for the family",
+      "price": 75
+    },
+    {
+      "id": "9",
+      "name": "Bling Bling King",
+      "category": "Chess",
+      "description": "Gold-plated, diamond-studded King",
+      "price": 1200
+    },
+    {
+      "id": "10",
+      "name": "Running Shoes",
+      "category": "Running",
+      "description": "Lightweight and breathable running shoes",
+      "price": 89.99
+    },
+    {
+      "id": "11",
+      "name": "Running Shorts",
+      "category": "Running",
+      "description": "Moisture-wicking running shorts",
+      "price": 24.99
+    },
+    {
+      "id": "12",
+      "name": "Running Watch",
+      "category": "Running",
+      "description": "GPS running watch with heart rate monitor",
+      "price": 199.99
+    },
+    {
+      "id": "13",
+      "name": "Road Bike",
+      "category": "Cycling",
+      "description": "Carbon fiber road bike with Ultegra groupset",
+      "price": 2499.99
+    },
+    {
+      "id": "14",
+      "name": "Mountain Bike",
+      "category": "Cycling",
+      "description": "Full-suspension mountain bike with RockShox fork",
+      "price": 1999.99
+    },
+    {
+      "id": "15",
+      "name": "Cycling Helmet",
+      "category": "Cycling",
+      "description": "Aerodynamic cycling helmet with MIPS protection",
+      "price": 149.99
+    }
+  ],
+  "orders": [
+    {
+      "id": null,
+      "cartService": {
+        "items": [
+          {
+            "product": {
+              "id": 1,
+              "name": "Product 1",
+              "category": "Category 1",
+              "description": "Product 1 (Category 1)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 2,
+              "name": "Product 2",
+              "category": "Category 1",
+              "description": "Product 2 (Category 1)",
+              "price": 100
+            },
+            "quantity": 2
+          }
+        ],
+        "itemCount": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 3
+        },
+        "totalPrice": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 300
+        },
+        "itemCount$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 3
+          }
+        },
+        "totalPrice$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 300
+          }
+        }
+      },
+      "name": "Adithya",
+      "address": "streetA",
+      "city": "CityB",
+      "state": null,
+      "zip": "15673",
+      "country": "USA",
+      "shipped": false
+    },
+    {
+      "id": null,
+      "cartService": {
+        "items": [
+          {
+            "product": {
+              "id": 1,
+              "name": "Product 1",
+              "category": "Category 1",
+              "description": "Product 1 (Category 1)",
+              "price": 100
+            },
+            "quantity": 2
+          },
+          {
+            "product": {
+              "id": 2,
+              "name": "Product 2",
+              "category": "Category 1",
+              "description": "Product 2 (Category 1)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 3,
+              "name": "Product 3",
+              "category": "Category 1",
+              "description": "Product 3 (Category 1)",
+              "price": 100
+            },
+            "quantity": 2
+          }
+        ],
+        "itemCount": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 5
+        },
+        "totalPrice": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 500
+        },
+        "itemCount$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 5
+          }
+        },
+        "totalPrice$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 500
+          }
+        }
+      },
+      "name": "qwerty",
+      "address": "qwerty",
+      "city": "qwerty",
+      "state": null,
+      "zip": "12345",
+      "country": "qwerty",
+      "shipped": false
+    },
+    {
+      "id": null,
+      "cartService": {
+        "items": [
+          {
+            "product": {
+              "id": "4",
+              "name": "Corner Flags",
+              "category": "Soccer",
+              "description": "Give your playing field a professional touch",
+              "price": 34.95
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": "2",
+              "name": "Lifejacket",
+              "category": "Watersports",
+              "description": "Protective and fashionable",
+              "price": 48.95
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": "10",
+              "name": "Running Shoes",
+              "category": "Running",
+              "description": "Lightweight and breathable running shoes",
+              "price": 89.99
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": "6",
+              "name": "Thinking Cap",
+              "category": "Chess",
+              "description": "Improve brain efficiency by 75%",
+              "price": 16
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 4
+        },
+        "totalPrice": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 189.89
+        },
+        "itemCount$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 4
+          }
+        },
+        "totalPrice$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 189.89
+          }
+        }
+      },
+      "name": "jiiojiojiji",
+      "address": "joijijoij",
+      "city": ";l",
+      "state": null,
+      "zip": ",;l,lm",
+      "country": "mbhbhb",
+      "shipped": false
+    },
+    {
+      "id": null,
+      "cartService": {
+        "items": [
+          {
+            "product": {
+              "id": 11,
+              "name": "Product 11",
+              "category": "Category 3",
+              "description": "Product 11 (Category 3)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 12,
+              "name": "Product 12",
+              "category": "Category 3",
+              "description": "Product 12 (Category 3)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 13,
+              "name": "Product 13",
+              "category": "Category 3",
+              "description": "Product 13 (Category 3)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 6,
+              "name": "Product 6",
+              "category": "Category 2",
+              "description": "Product 6 (Category 2)",
+              "price": 100
+            },
+            "quantity": 2
+          },
+          {
+            "product": {
+              "id": 7,
+              "name": "Product 7",
+              "category": "Category 2",
+              "description": "Product 7 (Category 2)",
+              "price": 100
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 6
+        },
+        "totalPrice": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 600
+        },
+        "itemCount$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 6
+          }
+        },
+        "totalPrice$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 600
+          }
+        }
+      },
+      "name": "abcd",
+      "address": "abcd",
+      "city": "abcd",
+      "state": null,
+      "zip": "1234",
+      "country": "abcd",
+      "shipped": false
+    },
+    {
+      "id": null,
+      "cartService": {
+        "items": [
+          {
+            "product": {
+              "id": 1,
+              "name": "Product 1",
+              "category": "Category 1",
+              "description": "Product 1 (Category 1)",
+              "price": 100
+            },
+            "quantity": 2
+          },
+          {
+            "product": {
+              "id": 7,
+              "name": "Product 7",
+              "category": "Category 2",
+              "description": "Product 7 (Category 2)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 8,
+              "name": "Product 8",
+              "category": "Category 2",
+              "description": "Product 8 (Category 2)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 6,
+              "name": "Product 6",
+              "category": "Category 2",
+              "description": "Product 6 (Category 2)",
+              "price": 100
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 11,
+              "name": "Product 11",
+              "category": "Category 3",
+              "description": "Product 11 (Category 3)",
+              "price": 100
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 6
+        },
+        "totalPrice": {
+          "closed": false,
+          "currentObservers": [],
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "_value": 600
+        },
+        "itemCount$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 6
+          }
+        },
+        "totalPrice$": {
+          "source": {
+            "closed": false,
+            "currentObservers": [],
+            "observers": [],
+            "isStopped": false,
+            "hasError": false,
+            "thrownError": null,
+            "_value": 600
+          }
+        }
+      },
+      "name": "abcd",
+      "address": "address",
+      "city": "city",
+      "state": null,
+      "zip": "12345",
+      "country": "country",
+      "shipped": false
+    }
+  ]
+}

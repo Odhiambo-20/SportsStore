@@ -4,14 +4,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../model/product.model';
 import { ProductRepository } from '../../model/product.repository';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-detail',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  product: Product | undefined;
+  product: Product | undefined ;
 
   constructor(private route: ActivatedRoute,
              private repository: ProductRepository) { }

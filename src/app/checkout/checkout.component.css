@@ -1,21 +1,26 @@
 input.ng-dirty.ng-invalid { border: 2px solid #ff0000 }
 input.ng-dirty.ng-valid { border: 2px solid #6bc502 }
 
-
+.checkout{
+  display: flex;
+  flex-direction: column;
+  padding: 1pc;
+}
 .store-header {
-    margin: 1pc;
-    background-color: #333;
-    color: #fff;
-    padding: 1pc 2pc;
-    font-size: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 1pc;
+  grid-area: header;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1.5pc 3pc;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1pc;
   }
 
   form{
-    padding: 2pc;
+    padding: 1pc 15pc;
+    color: white;
   }
 
   .centering{
@@ -28,11 +33,19 @@ input.ng-dirty.ng-valid { border: 2px solid #6bc502 }
   .final{
     display: flex;
     height: -webkit-fill-available;
-    position: absolute;
     flex-direction: column;
-    background: aquamarine;
-    margin: 1pc;
+    background: #212529;
+    margin: 8pc;
+    color: white;
     align-items: center;
+    position: absolute;
+    border-radius: 2pc;
     width: -webkit-fill-available;
     justify-content: center;
+  }
+
+  h3{
+    color: #000000;
+    font-size: 1.5rem;
+    margin: 0;
   }

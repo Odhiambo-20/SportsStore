@@ -5,14 +5,12 @@ import { CommonModule } from '@angular/common';
 import { ProductListComponent } from '../product-list/product-list.component';
 
 @NgModule({
-  declarations: [
-    ProductListComponent,
-  ],
   exports: [
     ProductListComponent, // export if used in other modules
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductListComponent
   ]
 })
 export class ProductModule { }

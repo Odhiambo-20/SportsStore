@@ -4,19 +4,22 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
 import { CartService } from '../model/cart.service';
-import { ProductListComponent } from "./product-list/product-list.component";
 import { CartComponent } from "../cart/cart.component";
 import { Router } from '@angular/router';
 import { HeaderComponent } from "../header/header.component";
+import { CommonModule } from '@angular/common';
+import { ProductListComponent } from '../product-list/product-list.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-store',
   standalone: true,
-  imports: [CommonModule, ProductListComponent, CartComponent, HeaderComponent],
+  imports: [CommonModule, HttpClientModule, CartComponent, HeaderComponent, ProductListComponent],
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css'],
-  providers: [CartService]
+  providers: [CartService, HttpClient]
 })
+
 export class StoreComponent implements OnInit {
   products: Product[] = [];
   categories: string[] = [];
@@ -51,10 +54,11 @@ export class StoreComponent implements OnInit {
             this.products = result.products;
             this.totalPages = Math.ceil(result.totalCount / this.pageSize);
         });
-}
-
+  }
+  
   loadCategories() {
     this.repository.getCategories().subscribe(categories => {
+      console.log("Fetched categories:", categories); // Check if categories are fetched
       this.categories = categories;
     });
   }

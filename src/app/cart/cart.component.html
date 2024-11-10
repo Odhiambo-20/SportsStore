@@ -1,6 +1,8 @@
 <!-- src/app/cart/cart.component.html -->
+ <div class="cart">
+
 <header class="store-header">
-  <h1>Sports Store</h1>
+  <h3 class="black">Adithya's Sports Store</h3>
 </header>
 
 <h3 class="big-text">Your Cart</h3>
@@ -29,7 +31,7 @@
             <button class="btn btn-danger" (click)="removeFromCart(item)">Remove</button>
           </td>
         </tr>
-        <tr>
+        <tr class="bold">
           <td>Total</td>
           <td>{{ items.length }}</td>
           <td></td>
@@ -49,5 +51,5 @@
     <button class="btn btn-primary" (click)="continueShopping()">Go to the Store</button>
   </ng-template>
 </div>
-
+</div>
 <!-- <div class="alt-title">Cart Detail Component</div> -->

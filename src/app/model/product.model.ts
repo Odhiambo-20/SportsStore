@@ -1,4 +1,5 @@
 // src/app/model/product.model.ts
+
 export class Product {
     constructor(
         public id: number,

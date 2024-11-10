@@ -1,1 +1,14 @@
-<p>product-list works!</p>
+<!-- src/app/store/product-list/product-list.component.html -->
+
+<div *ngFor="let product of products | slice: (currentPage - 1) * pageSize : currentPage * pageSize" class="product-item">
+
+    <div class="topDiv">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.price | currency }}</p>
+    </div>
+    
+    <div class="bottomDiv">
+      <p>{{ product.description }}</p>
+      <button class="btn-secondary" (click)="onAddToCart(product)">Add to Cart</button>
+    </div>
+  </div>

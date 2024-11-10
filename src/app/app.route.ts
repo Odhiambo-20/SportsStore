@@ -1,6 +1,8 @@
+// src/app/app.route.ts
+
 import { Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
-import { StoreComponent } from './store/store.component'; 
+import { StoreComponent } from './store/store.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './store/product-detail/product-detail.component';
 import { CartSummaryComponent } from './store/cart-summary/cart-summary.component';

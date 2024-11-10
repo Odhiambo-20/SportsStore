@@ -1,14 +1,14 @@
 <!-- src\app\checkout\checkout.component.html -->
-
+<div class="checkout">
 <header class="store-header">
-  <h1>Sports Store</h1>
+  <h3>Adithya's Sports Store</h3>
 </header>
 
   <div *ngIf="orderSent" class="final m-a-1 text-xs-center">
     <h2>Thanks!</h2>
     <p>Thanks for placing your order.</p>
     <p>We'll ship your goods as soon as possible.</p>
-    <button class="btn btn-primary" routerLink="/store">Return to Store</button>
+    <button class="btn btn-primary"  (click)="goToStore()">Return to Store</button>
   </div>
   <form *ngIf="!orderSent" #form="ngForm" novalidate (ngSubmit)="submitOrder(form)" class="m-a-1">
     <div class="form-group">
@@ -58,3 +58,4 @@
       <button class="btn btn-primary" type="submit">Complete Order</button>
     </div>
   </form>
+</div>

@@ -2,8 +2,8 @@
 
 import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
-import { StaticDataSource } from "./static.datasource";
 import { Observable, of } from "rxjs";
+import { RestDataSource } from './rest.datasource';
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +13,7 @@ export class ProductRepository {
     private products: Product[] = [];
     private categories: string[] = [];
 
-    constructor(private dataSource: StaticDataSource) {
+    constructor(public dataSource: RestDataSource) {
         dataSource.getProducts().subscribe(data => {
             this.products = data;
             this.categories = data.map(p => p.category ?? "(None)")
